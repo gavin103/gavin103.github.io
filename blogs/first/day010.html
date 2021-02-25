@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>剑指 Offer 35. 复杂链表的复制 | handbook</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="来自Gavin103的行者记录">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="preload" href="/assets/css/0.styles.1157b0c6.css" as="style"><link rel="preload" href="/assets/js/app.4886078c.js" as="script"><link rel="preload" href="/assets/js/3.40652726.js" as="script"><link rel="preload" href="/assets/js/1.f8f11812.js" as="script"><link rel="preload" href="/assets/js/20.af9e051e.js" as="script"><link rel="prefetch" href="/assets/js/10.7ca4ef6a.js"><link rel="prefetch" href="/assets/js/11.b9d83fb9.js"><link rel="prefetch" href="/assets/js/12.ce140f53.js"><link rel="prefetch" href="/assets/js/13.200602de.js"><link rel="prefetch" href="/assets/js/14.88e1fdb7.js"><link rel="prefetch" href="/assets/js/15.7450fa68.js"><link rel="prefetch" href="/assets/js/16.0a8ee604.js"><link rel="prefetch" href="/assets/js/17.1787e0c6.js"><link rel="prefetch" href="/assets/js/18.7bdc49c5.js"><link rel="prefetch" href="/assets/js/19.e949b5cd.js"><link rel="prefetch" href="/assets/js/21.1521e053.js"><link rel="prefetch" href="/assets/js/22.dd5d20cc.js"><link rel="prefetch" href="/assets/js/23.34e4daed.js"><link rel="prefetch" href="/assets/js/24.bc42b6df.js"><link rel="prefetch" href="/assets/js/25.ebaa5ad7.js"><link rel="prefetch" href="/assets/js/26.df0e87fc.js"><link rel="prefetch" href="/assets/js/27.a14b3077.js"><link rel="prefetch" href="/assets/js/28.03817fc1.js"><link rel="prefetch" href="/assets/js/29.ec1f40c6.js"><link rel="prefetch" href="/assets/js/30.46f29019.js"><link rel="prefetch" href="/assets/js/31.427ecb34.js"><link rel="prefetch" href="/assets/js/32.96f0e0e4.js"><link rel="prefetch" href="/assets/js/33.e1c58587.js"><link rel="prefetch" href="/assets/js/34.c574dbc3.js"><link rel="prefetch" href="/assets/js/35.cc39857d.js"><link rel="prefetch" href="/assets/js/36.6aea823b.js"><link rel="prefetch" href="/assets/js/37.207f67d2.js"><link rel="prefetch" href="/assets/js/38.f955df0e.js"><link rel="prefetch" href="/assets/js/39.3b7f9262.js"><link rel="prefetch" href="/assets/js/4.14a56972.js"><link rel="prefetch" href="/assets/js/40.05d65fc2.js"><link rel="prefetch" href="/assets/js/41.88113249.js"><link rel="prefetch" href="/assets/js/42.dbcf95ae.js"><link rel="prefetch" href="/assets/js/43.665174d1.js"><link rel="prefetch" href="/assets/js/44.7dff379f.js"><link rel="prefetch" href="/assets/js/45.c11e3ab7.js"><link rel="prefetch" href="/assets/js/46.67791191.js"><link rel="prefetch" href="/assets/js/47.f392496f.js"><link rel="prefetch" href="/assets/js/48.44dbdc8c.js"><link rel="prefetch" href="/assets/js/49.837a4153.js"><link rel="prefetch" href="/assets/js/5.eb1c9341.js"><link rel="prefetch" href="/assets/js/50.3d48e1ed.js"><link rel="prefetch" href="/assets/js/51.88d44a25.js"><link rel="prefetch" href="/assets/js/52.9d33e9b1.js"><link rel="prefetch" href="/assets/js/53.eaaca960.js"><link rel="prefetch" href="/assets/js/54.72d28f6b.js"><link rel="prefetch" href="/assets/js/55.2fdcf520.js"><link rel="prefetch" href="/assets/js/56.43fc4c46.js"><link rel="prefetch" href="/assets/js/57.3f50bfd7.js"><link rel="prefetch" href="/assets/js/58.dd61ec66.js"><link rel="prefetch" href="/assets/js/59.dd017dd5.js"><link rel="prefetch" href="/assets/js/6.aad2e814.js"><link rel="prefetch" href="/assets/js/60.a5d2d063.js"><link rel="prefetch" href="/assets/js/61.f7b684bb.js"><link rel="prefetch" href="/assets/js/62.a68fd973.js"><link rel="prefetch" href="/assets/js/63.c7ef8fff.js"><link rel="prefetch" href="/assets/js/64.5203d4e3.js"><link rel="prefetch" href="/assets/js/65.6e520a4b.js"><link rel="prefetch" href="/assets/js/66.e2a33e0f.js"><link rel="prefetch" href="/assets/js/67.ab1d78c5.js"><link rel="prefetch" href="/assets/js/68.c3d11999.js"><link rel="prefetch" href="/assets/js/69.0b9ea2a6.js"><link rel="prefetch" href="/assets/js/7.5030f148.js"><link rel="prefetch" href="/assets/js/70.3d14397c.js"><link rel="prefetch" href="/assets/js/71.a1e3ddc6.js"><link rel="prefetch" href="/assets/js/72.afc7c619.js"><link rel="prefetch" href="/assets/js/73.d2374272.js"><link rel="prefetch" href="/assets/js/74.fa7d3f93.js"><link rel="prefetch" href="/assets/js/75.dc35f111.js"><link rel="prefetch" href="/assets/js/76.e5113100.js"><link rel="prefetch" href="/assets/js/77.5f012dcb.js"><link rel="prefetch" href="/assets/js/78.64c7bc4a.js"><link rel="prefetch" href="/assets/js/79.935e5d1c.js"><link rel="prefetch" href="/assets/js/8.36d49f9e.js"><link rel="prefetch" href="/assets/js/80.bb4afca7.js"><link rel="prefetch" href="/assets/js/81.ea25bf27.js"><link rel="prefetch" href="/assets/js/82.a2111d92.js"><link rel="prefetch" href="/assets/js/83.63c8398a.js"><link rel="prefetch" href="/assets/js/84.cfb20466.js"><link rel="prefetch" href="/assets/js/85.39261f1a.js"><link rel="prefetch" href="/assets/js/86.348297ef.js"><link rel="prefetch" href="/assets/js/87.82dcd004.js"><link rel="prefetch" href="/assets/js/88.9f833a06.js"><link rel="prefetch" href="/assets/js/89.7077664c.js"><link rel="prefetch" href="/assets/js/9.71bbdb62.js"><link rel="prefetch" href="/assets/js/90.085b64e1.js"><link rel="prefetch" href="/assets/js/91.12628b44.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1157b0c6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-2d5f533b><div data-v-2d5f533b><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-2d5f533b data-v-2d5f533b><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-64685f0e data-v-2d5f533b data-v-2d5f533b><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>handbook</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>gavin103</span>
+            
+          <span data-v-64685f0e>2020 - </span>
+          2021
+        </a></span></div></div> <div class="hide" data-v-2d5f533b><header class="navbar" data-v-2d5f533b><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="handbook" class="logo"> <span class="site-name">handbook</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>
+      前端积累
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/datastructures/" class="nav-link"><i class="iconfont undefined"></i>
+  JS数据结构
+</a></li><li class="dropdown-item"><!----> <a href="/docs/algorithms/" class="nav-link"><i class="iconfont undefined"></i>
+  JS算法
+</a></li><li class="dropdown-item"><!----> <a href="/docs/webkit/" class="nav-link"><i class="iconfont undefined"></i>
+  读WebKit技术内幕
+</a></li><li class="dropdown-item"><!----> <a href="/docs/http/" class="nav-link"><i class="iconfont undefined"></i>
+  读HTTP权威指南
+</a></li><li class="dropdown-item"><!----> <a href="/docs/java/" class="nav-link"><i class="iconfont undefined"></i>
+  前端学Java
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      每日一题
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/js基础/" class="nav-link"><i class="iconfont undefined"></i>
+  js基础
+</a></li><li class="dropdown-item"><!----> <a href="/categories/手写JS/" class="nav-link"><i class="iconfont undefined"></i>
+  手写JS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/设计模式/" class="nav-link"><i class="iconfont undefined"></i>
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/算法/" class="nav-link"><i class="iconfont undefined"></i>
+  算法
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/books/" class="nav-link"><i class="iconfont reco-blog"></i>
+  图书馆
+</a></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  分类题目
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-github"></i>
+      联系我
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/gavin103" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://juejin.im/user/2840793775873527" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  掘金
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-2d5f533b></div> <aside class="sidebar" data-v-2d5f533b><div class="personal-info-wrapper" data-v-ca798c94 data-v-2d5f533b><img src="/avatar.png" alt="author-avatar" class="personal-img" data-v-ca798c94> <h3 class="name" data-v-ca798c94>
+    gavin103
+  </h3> <div class="num" data-v-ca798c94><div data-v-ca798c94><h3 data-v-ca798c94>11</h3> <h6 data-v-ca798c94>Article</h6></div> <div data-v-ca798c94><h3 data-v-ca798c94>3</h3> <h6 data-v-ca798c94>Tag</h6></div></div> <hr data-v-ca798c94></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>
+      前端积累
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/datastructures/" class="nav-link"><i class="iconfont undefined"></i>
+  JS数据结构
+</a></li><li class="dropdown-item"><!----> <a href="/docs/algorithms/" class="nav-link"><i class="iconfont undefined"></i>
+  JS算法
+</a></li><li class="dropdown-item"><!----> <a href="/docs/webkit/" class="nav-link"><i class="iconfont undefined"></i>
+  读WebKit技术内幕
+</a></li><li class="dropdown-item"><!----> <a href="/docs/http/" class="nav-link"><i class="iconfont undefined"></i>
+  读HTTP权威指南
+</a></li><li class="dropdown-item"><!----> <a href="/docs/java/" class="nav-link"><i class="iconfont undefined"></i>
+  前端学Java
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      每日一题
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/js基础/" class="nav-link"><i class="iconfont undefined"></i>
+  js基础
+</a></li><li class="dropdown-item"><!----> <a href="/categories/手写JS/" class="nav-link"><i class="iconfont undefined"></i>
+  手写JS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/设计模式/" class="nav-link"><i class="iconfont undefined"></i>
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/算法/" class="nav-link"><i class="iconfont undefined"></i>
+  算法
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/books/" class="nav-link"><i class="iconfont reco-blog"></i>
+  图书馆
+</a></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  分类题目
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-github"></i>
+      联系我
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/gavin103" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://juejin.im/user/2840793775873527" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  掘金
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-64685f0e data-v-2d5f533b><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>剑指 Offer 35. 复杂链表的复制</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>gavin103</span>
+            
+          <span data-v-64685f0e>2020 - </span>
+          2021
+        </a></span></div></div> <div data-v-2d5f533b><main class="page" style="padding-right:0;"><div class="page-title" style="display:none;"><h1 class="title">剑指 Offer 35. 复杂链表的复制</h1> <div data-v-3b7f5bdf><i class="iconfont reco-account" data-v-3b7f5bdf><span data-v-3b7f5bdf>gavin103</span></i> <i class="iconfont reco-date" data-v-3b7f5bdf><span data-v-3b7f5bdf>2021-02-20</span></i> <!----> <i class="iconfont reco-tag tags" data-v-3b7f5bdf><span class="tag-item" data-v-3b7f5bdf>数据结构</span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><p><strong>题目</strong>：
+请实现 copyRandomList 函数，复制一个复杂链表。在复杂链表中，每个节点除了有一个 next 指针指向下一个节点，还有一个 random 指针指向链表中的任意节点或者 null。</p> <p><strong>示例.1</strong>：
+<img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/01/09/e1.png" alt="1"></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>输入：head = [[7,null],[13,0],[11,4],[10,2],[1,0]]
+输出：[[7,null],[13,0],[11,4],[10,2],[1,0]]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p><strong>示例.2</strong>：
+<img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/01/09/e2.png" alt="2"></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>输入：head = [[1,1],[2,1]]
+输出：[[1,1],[2,1]]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p><strong>示例.3</strong>：
+<img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/01/09/e3.png" alt="3"></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>输入：head = [[3,null],[3,0],[3,null]]
+输出：[[3,null],[3,0],[3,null]]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p><strong>示例.4</strong>：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>输入：head = []
+输出：[]
+解释：给定的链表为空（空指针），因此返回 null。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>提示：</p> <ul><li><code>-10000 &lt;= Node.val &lt;= 10000</code></li> <li>Node.random 为空（null）或指向链表中的节点。</li> <li>节点数目不超过 1000 。</li></ul> <p>解答：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">Node</span><span class="token punctuation">(</span><span class="token parameter">val<span class="token punctuation">,</span> next<span class="token punctuation">,</span> random</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>val <span class="token operator">=</span> val<span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>next <span class="token operator">=</span> next<span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>random <span class="token operator">=</span> random<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> <span class="token function-variable function">copyRandomList</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">head</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> dict <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> current <span class="token operator">=</span> head<span class="token punctuation">;</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>current<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> newNode <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Node</span><span class="token punctuation">(</span>current<span class="token punctuation">.</span>val<span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+    dict<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span>current<span class="token punctuation">,</span> newNode<span class="token punctuation">)</span>
+    current <span class="token operator">=</span> current<span class="token punctuation">.</span>next
+  <span class="token punctuation">}</span>
+  current <span class="token operator">=</span> head<span class="token punctuation">;</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>current<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> newNode <span class="token operator">=</span> dict<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>current<span class="token punctuation">)</span>
+    <span class="token keyword">var</span> next <span class="token operator">=</span> dict<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>current<span class="token punctuation">.</span>next<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>next<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      newNode<span class="token punctuation">.</span>next <span class="token operator">=</span> next
+    <span class="token punctuation">}</span>
+    <span class="token keyword">var</span> random <span class="token operator">=</span> dict<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>current<span class="token punctuation">.</span>random<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>random<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      newNode<span class="token punctuation">.</span>random <span class="token operator">=</span> random
+    <span class="token punctuation">}</span>
+    current <span class="token operator">=</span> current<span class="token punctuation">.</span>next
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> dict<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>head<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br></div></div><p>本题难点： 在复制链表的过程中构建新链表各节点的 random 引用指向。</p> <p>评论：
+可以用借用Map的特点，将原始节点和复制节点作为key-value存入Map实例中。
+以此逐一修改新链表的next和random指向</p> <p>算法流程：</p> <ul><li>若头节点 head 为空节点，直接返回 nullnull ；</li> <li>初始化： 哈希表 dic ， 节点 cur 指向头节点；</li> <li>复制链表：
+<ul><li>建立新节点，并向 dic 添加键值对 (原 cur 节点, 新 cur 节点） ；</li> <li>cur 遍历至原链表下一节点；</li></ul></li> <li>构建新链表的引用指向：
+<ul><li>构建新节点的 next 和 random 引用指向；</li> <li>cur 遍历至原链表下一节点；</li></ul></li> <li>返回值： 新链表的头节点 dic[cur] ；</li></ul></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.4886078c.js" defer></script><script src="/assets/js/3.40652726.js" defer></script><script src="/assets/js/1.f8f11812.js" defer></script><script src="/assets/js/20.af9e051e.js" defer></script>
+  </body>
+</html>
