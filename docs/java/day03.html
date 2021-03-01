@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>内置类简介(一) | handbook</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="来自Gavin103的行者记录">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="preload" href="/assets/css/0.styles.1157b0c6.css" as="style"><link rel="preload" href="/assets/js/app.5dff91ff.js" as="script"><link rel="preload" href="/assets/js/3.40652726.js" as="script"><link rel="preload" href="/assets/js/1.f8f11812.js" as="script"><link rel="preload" href="/assets/js/83.67c237a3.js" as="script"><link rel="prefetch" href="/assets/js/10.7ca4ef6a.js"><link rel="prefetch" href="/assets/js/11.b9d83fb9.js"><link rel="prefetch" href="/assets/js/12.0e85d055.js"><link rel="prefetch" href="/assets/js/13.200602de.js"><link rel="prefetch" href="/assets/js/14.200f3148.js"><link rel="prefetch" href="/assets/js/15.7450fa68.js"><link rel="prefetch" href="/assets/js/16.0a8ee604.js"><link rel="prefetch" href="/assets/js/17.4dd54f09.js"><link rel="prefetch" href="/assets/js/18.15e2edf2.js"><link rel="prefetch" href="/assets/js/19.0ac7e047.js"><link rel="prefetch" href="/assets/js/20.43859f02.js"><link rel="prefetch" href="/assets/js/21.f724bc61.js"><link rel="prefetch" href="/assets/js/22.d7e2fc58.js"><link rel="prefetch" href="/assets/js/23.4cf4c82e.js"><link rel="prefetch" href="/assets/js/24.92eca549.js"><link rel="prefetch" href="/assets/js/25.1baff72d.js"><link rel="prefetch" href="/assets/js/26.b1bb781c.js"><link rel="prefetch" href="/assets/js/27.a18c3d36.js"><link rel="prefetch" href="/assets/js/28.98e1d5ef.js"><link rel="prefetch" href="/assets/js/29.dce94e7b.js"><link rel="prefetch" href="/assets/js/30.41cfe220.js"><link rel="prefetch" href="/assets/js/31.a066c69f.js"><link rel="prefetch" href="/assets/js/32.265497cb.js"><link rel="prefetch" href="/assets/js/33.4e601721.js"><link rel="prefetch" href="/assets/js/34.f62d1623.js"><link rel="prefetch" href="/assets/js/35.4052256b.js"><link rel="prefetch" href="/assets/js/36.0ace8c54.js"><link rel="prefetch" href="/assets/js/37.10c5d58f.js"><link rel="prefetch" href="/assets/js/38.fc227607.js"><link rel="prefetch" href="/assets/js/39.43769855.js"><link rel="prefetch" href="/assets/js/4.14a56972.js"><link rel="prefetch" href="/assets/js/40.65df9266.js"><link rel="prefetch" href="/assets/js/41.d63f9027.js"><link rel="prefetch" href="/assets/js/42.be6fa7fe.js"><link rel="prefetch" href="/assets/js/43.d936f748.js"><link rel="prefetch" href="/assets/js/44.11364736.js"><link rel="prefetch" href="/assets/js/45.ff85dc12.js"><link rel="prefetch" href="/assets/js/46.1f30a7db.js"><link rel="prefetch" href="/assets/js/47.f396513b.js"><link rel="prefetch" href="/assets/js/48.91396366.js"><link rel="prefetch" href="/assets/js/49.3c6f4941.js"><link rel="prefetch" href="/assets/js/5.eb1c9341.js"><link rel="prefetch" href="/assets/js/50.8f0a8641.js"><link rel="prefetch" href="/assets/js/51.7d276e90.js"><link rel="prefetch" href="/assets/js/52.f7ff7599.js"><link rel="prefetch" href="/assets/js/53.fd7a8513.js"><link rel="prefetch" href="/assets/js/54.bb4cc8bd.js"><link rel="prefetch" href="/assets/js/55.a4468aee.js"><link rel="prefetch" href="/assets/js/56.6b39165a.js"><link rel="prefetch" href="/assets/js/57.e415d0fb.js"><link rel="prefetch" href="/assets/js/58.05579291.js"><link rel="prefetch" href="/assets/js/59.34875830.js"><link rel="prefetch" href="/assets/js/6.aad2e814.js"><link rel="prefetch" href="/assets/js/60.ef989400.js"><link rel="prefetch" href="/assets/js/61.b8fbf19a.js"><link rel="prefetch" href="/assets/js/62.2c1d907e.js"><link rel="prefetch" href="/assets/js/63.5995aaf0.js"><link rel="prefetch" href="/assets/js/64.aa51db7a.js"><link rel="prefetch" href="/assets/js/65.d1c0f24a.js"><link rel="prefetch" href="/assets/js/66.d97ab4b7.js"><link rel="prefetch" href="/assets/js/67.66847fbc.js"><link rel="prefetch" href="/assets/js/68.89f5383e.js"><link rel="prefetch" href="/assets/js/69.cead1f12.js"><link rel="prefetch" href="/assets/js/7.5030f148.js"><link rel="prefetch" href="/assets/js/70.5e5c52ef.js"><link rel="prefetch" href="/assets/js/71.234ddbe4.js"><link rel="prefetch" href="/assets/js/72.a9b97a31.js"><link rel="prefetch" href="/assets/js/73.bcf62690.js"><link rel="prefetch" href="/assets/js/74.03a0585d.js"><link rel="prefetch" href="/assets/js/75.5068e20e.js"><link rel="prefetch" href="/assets/js/76.f40661f9.js"><link rel="prefetch" href="/assets/js/77.9839eb45.js"><link rel="prefetch" href="/assets/js/78.3c76762f.js"><link rel="prefetch" href="/assets/js/79.8fd10b4c.js"><link rel="prefetch" href="/assets/js/8.af98971a.js"><link rel="prefetch" href="/assets/js/80.497f8cfa.js"><link rel="prefetch" href="/assets/js/81.22794168.js"><link rel="prefetch" href="/assets/js/82.cb81ba68.js"><link rel="prefetch" href="/assets/js/84.6757237e.js"><link rel="prefetch" href="/assets/js/85.db5b58ae.js"><link rel="prefetch" href="/assets/js/86.cc0ce1c5.js"><link rel="prefetch" href="/assets/js/87.37d67bc4.js"><link rel="prefetch" href="/assets/js/88.10338728.js"><link rel="prefetch" href="/assets/js/89.85bb010e.js"><link rel="prefetch" href="/assets/js/9.71bbdb62.js"><link rel="prefetch" href="/assets/js/90.a5c05a16.js"><link rel="prefetch" href="/assets/js/91.efee7f55.js"><link rel="prefetch" href="/assets/js/92.9b4086ba.js"><link rel="prefetch" href="/assets/js/93.953c6d2e.js"><link rel="prefetch" href="/assets/js/94.ad5d117d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1157b0c6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-2d5f533b><div data-v-2d5f533b><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-2d5f533b data-v-2d5f533b><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-64685f0e data-v-2d5f533b data-v-2d5f533b><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>handbook</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>gavin103</span>
+            
+          <span data-v-64685f0e>2020 - </span>
+          2021
+        </a></span></div></div> <div class="hide" data-v-2d5f533b><header class="navbar" data-v-2d5f533b><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="handbook" class="logo"> <span class="site-name">handbook</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>
+      前端积累
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/datastructures/" class="nav-link"><i class="iconfont undefined"></i>
+  JS数据结构
+</a></li><li class="dropdown-item"><!----> <a href="/docs/algorithms/" class="nav-link"><i class="iconfont undefined"></i>
+  JS算法
+</a></li><li class="dropdown-item"><!----> <a href="/docs/webkit/" class="nav-link"><i class="iconfont undefined"></i>
+  读WebKit技术内幕
+</a></li><li class="dropdown-item"><!----> <a href="/docs/http/" class="nav-link"><i class="iconfont undefined"></i>
+  读HTTP权威指南
+</a></li><li class="dropdown-item"><!----> <a href="/docs/java/" class="nav-link router-link-active"><i class="iconfont undefined"></i>
+  前端学Java
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      每日一题
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/js基础/" class="nav-link"><i class="iconfont undefined"></i>
+  js基础
+</a></li><li class="dropdown-item"><!----> <a href="/categories/算法/" class="nav-link"><i class="iconfont undefined"></i>
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/categories/设计模式/" class="nav-link"><i class="iconfont undefined"></i>
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/手写JS/" class="nav-link"><i class="iconfont undefined"></i>
+  手写JS
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/books/" class="nav-link"><i class="iconfont reco-blog"></i>
+  图书馆
+</a></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  分类题目
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-github"></i>
+      联系我
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/gavin103" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://juejin.im/user/2840793775873527" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  掘金
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-2d5f533b></div> <aside class="sidebar" data-v-2d5f533b><div class="personal-info-wrapper" data-v-ca798c94 data-v-2d5f533b><img src="/avatar.png" alt="author-avatar" class="personal-img" data-v-ca798c94> <h3 class="name" data-v-ca798c94>
+    gavin103
+  </h3> <div class="num" data-v-ca798c94><div data-v-ca798c94><h3 data-v-ca798c94>12</h3> <h6 data-v-ca798c94>Article</h6></div> <div data-v-ca798c94><h3 data-v-ca798c94>3</h3> <h6 data-v-ca798c94>Tag</h6></div></div> <hr data-v-ca798c94></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>
+      前端积累
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/datastructures/" class="nav-link"><i class="iconfont undefined"></i>
+  JS数据结构
+</a></li><li class="dropdown-item"><!----> <a href="/docs/algorithms/" class="nav-link"><i class="iconfont undefined"></i>
+  JS算法
+</a></li><li class="dropdown-item"><!----> <a href="/docs/webkit/" class="nav-link"><i class="iconfont undefined"></i>
+  读WebKit技术内幕
+</a></li><li class="dropdown-item"><!----> <a href="/docs/http/" class="nav-link"><i class="iconfont undefined"></i>
+  读HTTP权威指南
+</a></li><li class="dropdown-item"><!----> <a href="/docs/java/" class="nav-link router-link-active"><i class="iconfont undefined"></i>
+  前端学Java
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      每日一题
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/js基础/" class="nav-link"><i class="iconfont undefined"></i>
+  js基础
+</a></li><li class="dropdown-item"><!----> <a href="/categories/算法/" class="nav-link"><i class="iconfont undefined"></i>
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/categories/设计模式/" class="nav-link"><i class="iconfont undefined"></i>
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/手写JS/" class="nav-link"><i class="iconfont undefined"></i>
+  手写JS
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/books/" class="nav-link"><i class="iconfont reco-blog"></i>
+  图书馆
+</a></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  分类题目
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-github"></i>
+      联系我
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/gavin103" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://juejin.im/user/2840793775873527" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  掘金
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><a href="/docs/java/" aria-current="page" class="sidebar-link">前端学Java</a></li><li><a href="/docs/java/day01.html" class="sidebar-link">Hello World</a></li><li><a href="/docs/java/day02.html" class="sidebar-link">基本概念扫盲</a></li><li><a href="/docs/java/day03.html" aria-current="page" class="active sidebar-link">内置类简介(一)</a></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-64685f0e data-v-2d5f533b><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>内置类简介(一)</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>gavin103</span>
+            
+          <span data-v-64685f0e>2020 - </span>
+          2021
+        </a></span></div></div> <div data-v-2d5f533b><main class="page" style="padding-right:0;"><div class="page-title" style="display:none;"><h1 class="title">内置类简介(一)</h1> <div data-v-3b7f5bdf><i class="iconfont reco-account" data-v-3b7f5bdf><span data-v-3b7f5bdf>gavin103</span></i> <i class="iconfont reco-date" data-v-3b7f5bdf><span data-v-3b7f5bdf>2021-02-23</span></i> <!----> <i class="iconfont reco-tag tags" data-v-3b7f5bdf><span class="tag-item" data-v-3b7f5bdf>后端</span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><h2 id="math类"><a href="#math类" class="header-anchor">#</a> Math类</h2> <p>同Js中的内置Math类大同小异</p> <h2 id="character类"><a href="#character类" class="header-anchor">#</a> Character类</h2> <p>Js中没有的一个类，表示单一字符</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>char ch = 'a';
+ 
+// Unicode 字符表示形式
+char uniChar = '\u039A'; 
+ 
+// 字符数组
+char[] charArray ={ 'a', 'b', 'c', 'd', 'e' };
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><table class="reference"><tbody><tr><th>
+				序号</th> <th>
+				方法与描述</th></tr> <tr><td>
+				1</td> <td><a href="character-isletter.html" target="_blank">isLetter()</a><br>
+				是否是一个字母</td></tr> <tr><td>
+				2</td> <td><a href="character-isdigit.html" target="_blank">isDigit()</a><br>
+				是否是一个数字字符</td></tr> <tr><td>
+				3</td> <td><a href="character-iswhitespace.html" target="_blank">isWhitespace()</a><br>
+				是否是一个空白字符</td></tr> <tr><td>
+				4</td> <td><a href="character-isuppercase.html" target="_blank">isUpperCase()</a><br>
+				是否是大写字母</td></tr> <tr><td>
+				5</td> <td><a href="character-islowercase.html" target="_blank">isLowerCase()</a><br>
+				是否是小写字母</td></tr> <tr><td>
+				6</td> <td><a href="character-touppercase.html" target="_blank">toUpperCase()</a><br>
+				指定字母的大写形式</td></tr> <tr><td>
+				7</td> <td><a href="character-tolowercase.html" target="_blank">toLowerCase</a>()<br>
+				指定字母的小写形式</td></tr> <tr><td>
+				8</td> <td><a href="character-tostring.html" target="_blank">toString</a>()<br>
+				返回字符的字符串形式，字符串的长度仅为1</td></tr></tbody></table> <h2 id="string类"><a href="#string类" class="header-anchor">#</a> String类</h2> <p>声明</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>String str = &quot;Runoob&quot;;
+String str2=new string(&quot;Runoob&quot;);
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>创建格式化字符串</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>String fs;
+fs = String.format(&quot;浮点型变量的值为 &quot; +
+                   &quot;%f, 整型变量的值为 &quot; +
+                   &quot; %d, 字符串变量的值为 &quot; +
+                   &quot; %s&quot;, floatVar, intVar, stringVar);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><table class="reference"><tbody><tr><th style="width:76px;">
+				SN(序号)</th> <th style="width:501px;">
+				方法描述</th></tr> <tr><td style="width:76px;">
+				1</td> <td style="width:501px;"><a href="java-string-charat.html" target="_blank" rel="noopener noreferrer">char charAt(int index)</a><br>
+				返回指定索引处的 char 值。</td></tr> <tr><td style="width:76px;">
+				2</td> <td style="width:501px;"><a href="java-string-compareto.html" target="_blank" rel="noopener noreferrer">int compareTo(Object o)</a><br>
+				把这个字符串和另一个对象比较。</td></tr> <tr><td style="width:76px;">
+				3</td> <td style="width:501px;"><a href="java-string-compareto.html" target="_blank" rel="noopener noreferrer">int compareTo(String anotherString)</a><br>
+				按字典顺序比较两个字符串。</td></tr> <tr><td style="width:76px;">
+				4</td> <td style="width:501px;"><a href="java-string-comparetoignorecase.html" target="_blank" rel="noopener noreferrer">int compareToIgnoreCase(String str)</a><br>
+				按字典顺序比较两个字符串，不考虑大小写。</td></tr> <tr><td style="width:76px;">
+				5</td> <td style="width:501px;"><a href="java-string-concat.html" target="_blank" rel="noopener noreferrer">String concat(String str)</a><br>
+				将指定字符串连接到此字符串的结尾。</td></tr> <tr><td style="width:76px;">
+				6</td> <td style="width:501px;"><a href="java-string-contentequals.html" target="_blank" rel="noopener noreferrer">boolean contentEquals(StringBuffer sb)</a><br>
+				当且仅当字符串与指定的StringBuffer有相同顺序的字符时候返回真。</td></tr> <tr><td style="width:76px;">
+				7</td> <td style="width:501px;"><a href="java-string-copyvalueof.html" target="_blank" rel="noopener noreferrer">static String copyValueOf(char[] data)</a><br>
+				返回指定数组中表示该字符序列的 String。</td></tr> <tr><td style="width:76px;">
+				8</td> <td style="width:501px;"><a href="java-string-copyvalueof.html" target="_blank" rel="noopener noreferrer">static String copyValueOf(char[] data, int offset, int count)</a><br>
+				返回指定数组中表示该字符序列的 String。</td></tr> <tr><td style="width:76px;">
+				9</td> <td style="width:501px;"><a href="java-string-endswith.html" target="_blank" rel="noopener noreferrer">boolean endsWith(String suffix)</a><br>
+				测试此字符串是否以指定的后缀结束。</td></tr> <tr><td style="width:76px;">
+				10</td> <td style="width:501px;"><a href="java-string-equals.html" target="_blank" rel="noopener noreferrer">boolean equals(Object anObject)</a><br>
+				将此字符串与指定的对象比较。</td></tr> <tr><td style="width:76px;">
+				11</td> <td style="width:501px;"><a href="java-string-equalsignorecase.html" target="_blank" rel="noopener noreferrer">boolean equalsIgnoreCase(String anotherString)</a><br>
+				将此 String 与另一个 String 比较，不考虑大小写。</td></tr> <tr><td style="width:76px;">
+				12</td> <td style="width:501px;"><a href="java-string-getbytes.html" target="_blank" rel="noopener noreferrer">byte[] getBytes()</a><br>
+				 使用平台的默认字符集将此 String 编码为 byte 序列，并将结果存储到一个新的 byte 数组中。</td></tr> <tr><td style="width:76px;">
+				13</td> <td style="width:501px;"><a href="java-string-getbytes.html" target="_blank" rel="noopener noreferrer">byte[] getBytes(String charsetName)</a><br>
+				使用指定的字符集将此 String 编码为 byte 序列，并将结果存储到一个新的 byte 数组中。</td></tr> <tr><td style="width:76px;">
+				14</td> <td style="width:501px;"><a href="java-string-getchars.html" target="_blank" rel="noopener noreferrer">void getChars(int srcBegin, int srcEnd, char[] dst, int dstBegin)</a><br>
+				将字符从此字符串复制到目标字符数组。</td></tr> <tr><td style="width:76px;">
+				15</td> <td style="width:501px;"><a href="java-string-hashcode.html" target="_blank" rel="noopener noreferrer">int hashCode()</a><br>
+				返回此字符串的哈希码。</td></tr> <tr><td style="width:76px;">
+				16</td> <td style="width:501px;"><a href="java-string-indexof.html" target="_blank" rel="noopener noreferrer">int indexOf(int ch)</a><br>
+				返回指定字符在此字符串中第一次出现处的索引。</td></tr> <tr><td style="width:76px;">
+				17</td> <td style="width:501px;"><a href="java-string-indexof.html" target="_blank" rel="noopener noreferrer">int indexOf(int ch, int fromIndex)</a><br>
+				返回在此字符串中第一次出现指定字符处的索引，从指定的索引开始搜索。</td></tr> <tr><td style="width:76px;">
+				18</td> <td style="width:501px;"><a href="java-string-indexof.html" target="_blank" rel="noopener noreferrer">int indexOf(String str)</a><br>
+				 返回指定子字符串在此字符串中第一次出现处的索引。</td></tr> <tr><td style="width:76px;">
+				19</td> <td style="width:501px;"><a href="java-string-indexof.html" target="_blank" rel="noopener noreferrer">int indexOf(String str, int fromIndex)</a><br>
+				返回指定子字符串在此字符串中第一次出现处的索引，从指定的索引开始。</td></tr> <tr><td style="width:76px;">
+				20</td> <td style="width:501px;"><a href="java-string-intern.html" target="_blank" rel="noopener noreferrer">String intern()</a><br>
+				 返回字符串对象的规范化表示形式。</td></tr> <tr><td style="width:76px;">
+				21</td> <td style="width:501px;"><a href="java-string-lastindexof.html" target="_blank" rel="noopener noreferrer">int lastIndexOf(int ch)</a><br>
+				 返回指定字符在此字符串中最后一次出现处的索引。</td></tr> <tr><td style="width:76px;">
+				22</td> <td style="width:501px;"><a href="java-string-lastindexof.html" target="_blank" rel="noopener noreferrer">int lastIndexOf(int ch, int fromIndex)</a><br>
+				返回指定字符在此字符串中最后一次出现处的索引，从指定的索引处开始进行反向搜索。</td></tr> <tr><td style="width:76px;">
+				23</td> <td style="width:501px;"><a href="java-string-lastindexof.html" target="_blank" rel="noopener noreferrer">int lastIndexOf(String str)</a><br>
+				返回指定子字符串在此字符串中最右边出现处的索引。</td></tr> <tr><td style="width:76px;">
+				24</td> <td style="width:501px;"><a href="java-string-lastindexof.html" target="_blank" rel="noopener noreferrer">int lastIndexOf(String str, int fromIndex)</a><br>
+				 返回指定子字符串在此字符串中最后一次出现处的索引，从指定的索引开始反向搜索。</td></tr> <tr><td style="width:76px;">
+				25</td> <td style="width:501px;"><a href="java-string-length.html" target="_blank" rel="noopener noreferrer">int length()</a><br>
+				返回此字符串的长度。</td></tr> <tr><td style="width:76px;">
+				26</td> <td style="width:501px;"><a href="java-string-matches.html" target="_blank" rel="noopener noreferrer">boolean matches(String regex)</a><br>
+				告知此字符串是否匹配给定的正则表达式。</td></tr> <tr><td style="width:76px;">
+				27</td> <td style="width:501px;"><a href="java-string-regionmatches.html" target="_blank" rel="noopener noreferrer">boolean regionMatches(boolean ignoreCase, int toffset, String other, int ooffset, int len)</a><br>
+				测试两个字符串区域是否相等。</td></tr> <tr><td style="width:76px;">
+				28</td> <td style="width:501px;"><a href="java-string-regionmatches.html" target="_blank" rel="noopener noreferrer">boolean regionMatches(int toffset, String other, int ooffset, int len)</a><br>
+				测试两个字符串区域是否相等。</td></tr> <tr><td style="width:76px;">
+				29</td> <td style="width:501px;"><a href="java-string-replace.html" target="_blank" rel="noopener noreferrer">String replace(char oldChar, char newChar)</a><br>
+				返回一个新的字符串，它是通过用 newChar 替换此字符串中出现的所有 oldChar 得到的。</td></tr> <tr><td style="width:76px;">
+				30</td> <td style="width:501px;"><a href="java-string-replaceall.html" target="_blank" rel="noopener noreferrer">String replaceAll(String regex, String replacement)</a><br>
+				使用给定的 replacement 替换此字符串所有匹配给定的正则表达式的子字符串。</td></tr> <tr><td style="width:76px;">
+				31</td> <td style="width:501px;"><a href="java-string-replacefirst.html" target="_blank" rel="noopener noreferrer">String replaceFirst(String regex, String replacement)</a><br>
+				 使用给定的 replacement 替换此字符串匹配给定的正则表达式的第一个子字符串。</td></tr> <tr><td style="width:76px;">
+				32</td> <td style="width:501px;"><a href="java-string-split.html" target="_blank" rel="noopener noreferrer">String[] split(String regex)</a><br>
+				根据给定正则表达式的匹配拆分此字符串。</td></tr> <tr><td style="width:76px;">
+				33</td> <td style="width:501px;"><a href="java-string-split.html" target="_blank" rel="noopener noreferrer">String[] split(String regex, int limit)</a><br>
+				根据匹配给定的正则表达式来拆分此字符串。</td></tr> <tr><td style="width:76px;">
+				34</td> <td style="width:501px;"><a href="java-string-startswith.html" target="_blank" rel="noopener noreferrer">boolean startsWith(String prefix)</a><br>
+				测试此字符串是否以指定的前缀开始。</td></tr> <tr><td style="width:76px;">
+				35</td> <td style="width:501px;"><a href="java-string-startswith.html" target="_blank" rel="noopener noreferrer">boolean startsWith(String prefix, int toffset)</a><br>
+				测试此字符串从指定索引开始的子字符串是否以指定前缀开始。</td></tr> <tr><td style="width:76px;">
+				36</td> <td style="width:501px;"><a href="java-string-subsequence.html" target="_blank" rel="noopener noreferrer">CharSequence subSequence(int beginIndex, int endIndex)</a><br>
+				 返回一个新的字符序列，它是此序列的一个子序列。</td></tr> <tr><td style="width:76px;">
+				37</td> <td style="width:501px;"><a href="java-string-substring.html" target="_blank" rel="noopener noreferrer">String substring(int beginIndex)</a><br>
+				返回一个新的字符串，它是此字符串的一个子字符串。</td></tr> <tr><td style="width:76px;">
+				38</td> <td style="width:501px;"><a href="java-string-substring.html" target="_blank" rel="noopener noreferrer">String substring(int beginIndex, int endIndex)</a><br>
+				返回一个新字符串，它是此字符串的一个子字符串。</td></tr> <tr><td style="width:76px;">
+				39</td> <td style="width:501px;"><a href="java-string-tochararray.html" target="_blank" rel="noopener noreferrer">char[] toCharArray()</a><br>
+				将此字符串转换为一个新的字符数组。</td></tr> <tr><td style="width:76px;">
+				40</td> <td style="width:501px;"><a href="java-string-tolowercase.html" target="_blank" rel="noopener noreferrer">String toLowerCase()</a><br>
+				使用默认语言环境的规则将此 String 中的所有字符都转换为小写。</td></tr> <tr><td style="width:76px;">
+				41</td> <td style="width:501px;"><a href="java-string-tolowercase.html" target="_blank" rel="noopener noreferrer">String toLowerCase(Locale locale)</a><br>
+				 使用给定 Locale 的规则将此 String 中的所有字符都转换为小写。</td></tr> <tr><td style="width:76px;">
+				42</td> <td style="width:501px;"><a href="java-string-tostring.html" target="_blank" rel="noopener noreferrer">String toString()</a><br>
+				 返回此对象本身（它已经是一个字符串！）。</td></tr> <tr><td style="width:76px;">
+				43</td> <td style="width:501px;"><a href="java-string-touppercase.html" target="_blank" rel="noopener noreferrer">String toUpperCase()</a><br>
+				使用默认语言环境的规则将此 String 中的所有字符都转换为大写。</td></tr> <tr><td style="width:76px;">
+				44</td> <td style="width:501px;"><a href="java-string-touppercase.html" target="_blank" rel="noopener noreferrer">String toUpperCase(Locale locale)</a><br>
+				使用给定 Locale 的规则将此 String 中的所有字符都转换为大写。</td></tr> <tr><td style="width:76px;">
+				45</td> <td style="width:501px;"><a href="java-string-trim.html" target="_blank" rel="noopener noreferrer">String trim()</a><br>
+				返回字符串的副本，忽略前导空白和尾部空白。</td></tr> <tr><td style="width:76px;">
+				46</td> <td style="width:501px;"><a href="java-string-valueof.html" target="_blank" rel="noopener noreferrer">static String valueOf(primitive data type x)</a><br>
+				返回给定data type类型x参数的字符串表示形式。</td></tr> <tr><td style="width:76px;">
+				47</td> <td style="width:501px;"><a href="java-string-contains.html" target="_blank" rel="noopener noreferrer">contains(CharSequence chars)</a><br>
+				判断是否包含指定的字符系列。</td></tr> <tr><td style="width:76px;">
+				48</td> <td style="width:501px;"><a href="java-string-isempty.html" target="_blank" rel="noopener noreferrer">isEmpty()</a><br>
+				判断字符串是否为空。</td></tr></tbody></table> <h2 id="stringbuffer-和-stringbuilder-类"><a href="#stringbuffer-和-stringbuilder-类" class="header-anchor">#</a> StringBuffer 和 StringBuilder 类</h2> <p>当对字符串进行修改的时候，需要使用 StringBuffer 和 StringBuilder 类。</p> <p>和 String 类不同的是，StringBuffer 和 StringBuilder 类的对象能够被多次的修改，并且不产生新的未使用对象。
+<img src="https://www.runoob.com/wp-content/uploads/2013/12/java-string-20201208.png" alt=""></p> <p>在使用 StringBuffer 类时，每次都会对 StringBuffer 对象本身进行操作，而不是生成新的对象，所以如果需要对字符串进行修改推荐使用 StringBuffer。</p> <p>StringBuilder 类在 Java 5 中被提出，它和 StringBuffer 之间的最大不同在于 StringBuilder 的方法不是线程安全的（不能同步访问）。</p> <p>由于 StringBuilder 相较于 StringBuffer 有速度优势，所以多数情况下建议使用 StringBuilder 类。</p> <p><img src="https://www.runoob.com/wp-content/uploads/2013/12/2021-03-01-java-stringbuffer.svg" alt=""></p> <p>以下是 StringBuffer 类支持的主要方法：
+<table class="reference"><tbody><tr><th>
+序号</th> <th>
+方法描述</th></tr> <tr><td>
+1</td> <td>
+public StringBuffer append(String s)<br>
+将指定的字符串追加到此字符序列。</td></tr> <tr><td>
+2</td> <td>
+public StringBuffer reverse()<br>
+ 将此字符序列用其反转形式取代。</td></tr> <tr><td>
+3</td> <td>
+public delete(int start, int end)<br>
+移除此序列的子字符串中的字符。</td></tr> <tr><td>
+4</td> <td>
+public insert(int offset, int i)<br>
+将 <code>int</code> 参数的字符串表示形式插入此序列中。</td></tr> <tr><td>
+5</td> <td>
+replace(int start, int end, String str)<br>
+使用给定 <code>String</code> 中的字符替换此序列的子字符串中的字符。</td></tr></tbody></table></p> <p>下面的列表里的方法和 String 类的方法类似：
+<table class="reference"><tbody><tr><th style="width:64px;">
+序号</th> <th style="width:517px;">
+方法描述</th></tr> <tr><td style="width:64px;">
+1</td> <td style="width:517px;">
+int capacity()<br>
+返回当前容量。</td></tr> <tr><td style="width:64px;">
+2</td> <td style="width:517px;">
+char charAt(int index)<br>
+返回此序列中指定索引处的 <code>char</code> 值。</td></tr> <tr><td style="width:64px;">
+3</td> <td style="width:517px;">
+void ensureCapacity(int minimumCapacity)<br>
+确保容量至少等于指定的最小值。</td></tr> <tr><td style="width:64px;">
+4</td> <td style="width:517px;">
+void getChars(int srcBegin, int srcEnd, char[] dst, int dstBegin)<br>
+将字符从此序列复制到目标字符数组 <code>dst</code>。</td></tr> <tr><td style="width:64px;">
+5</td> <td style="width:517px;">
+int indexOf(String str)<br>
+返回第一次出现的指定子字符串在该字符串中的索引。</td></tr> <tr><td style="width:64px;">
+6</td> <td style="width:517px;">
+int indexOf(String str, int fromIndex)<br>
+从指定的索引处开始，返回第一次出现的指定子字符串在该字符串中的索引。</td></tr> <tr><td style="width:64px;">
+7</td> <td style="width:517px;">
+int lastIndexOf(String str)<br>
+返回最右边出现的指定子字符串在此字符串中的索引。</td></tr> <tr><td style="width:64px;">
+8</td> <td style="width:517px;">
+int lastIndexOf(String str, int fromIndex)<br>
+返回 String 对象中子字符串最后出现的位置。</td></tr> <tr><td style="width:64px;">
+9</td> <td style="width:517px;">
+int length()<br>
+ 返回长度（字符数）。</td></tr> <tr><td style="width:64px;">
+10</td> <td style="width:517px;">
+void setCharAt(int index, char ch)<br>
+将给定索引处的字符设置为 <code>ch</code>。</td></tr> <tr><td style="width:64px;">
+11</td> <td style="width:517px;">
+void setLength(int newLength)<br>
+设置字符序列的长度。</td></tr> <tr><td style="width:64px;">
+12</td> <td style="width:517px;">
+CharSequence subSequence(int start, int end)<br>
+返回一个新的字符序列，该字符序列是此序列的子序列。</td></tr> <tr><td style="width:64px;">
+13</td> <td style="width:517px;">
+String substring(int start)<br>
+返回一个新的 <code>String</code>，它包含此字符序列当前所包含的字符子序列。</td></tr> <tr><td style="width:64px;">
+14</td> <td style="width:517px;">
+String substring(int start, int end)<br>
+返回一个新的 <code>String</code>，它包含此序列当前所包含的字符子序列。</td></tr> <tr><td style="width:64px;">
+15</td> <td style="width:517px;">
+String toString()<br>
+返回此序列中数据的字符串表示形式。</td></tr></tbody></table></p></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.5dff91ff.js" defer></script><script src="/assets/js/3.40652726.js" defer></script><script src="/assets/js/1.f8f11812.js" defer></script><script src="/assets/js/83.67c237a3.js" defer></script>
+  </body>
+</html>
